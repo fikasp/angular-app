@@ -1,7 +1,7 @@
 <div class="container">
   <nav class="row blue">
     <div class="nav-wrapper">
-      <span class="brand-logo center">Lista zadań</span>
+      <span class="brand-logo center">{{title}}</span>
     </div>
   </nav>
 
@@ -40,7 +40,7 @@
   <footer class="page-footer mt-5 light-blue">
     <div class="footer-copyright blue">
       <div class="container center">
-        2022 © Lista zadań - All rights reserved.
+      {{ getDate() | date:'yyyy-MM-dd'}} © Lista zadań - All rights reserved.
       </div>
     </div>
   </footer>
