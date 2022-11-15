@@ -17,11 +17,8 @@
 }
 
 .main {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 240px;
-  right: 0;
+  margin-left: 240px;
+  padding: 0 10px;
 }
 
 h3 {
@@ -37,12 +34,10 @@ h3 {
 li {
   margin-bottom: 5px;
   cursor: pointer;
-}
-
-li:hover {
-  color: gray;
-}
-
-li.active {
-  color: red;
+  &:hover {
+    color: gray;
+  }
+  &.active {
+    color: blue;
+  }
 }

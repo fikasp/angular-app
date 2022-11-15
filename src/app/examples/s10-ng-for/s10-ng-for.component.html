@@ -1,1 +1,109 @@
-Components works!
+<h1>Przykłady użycia *ngFor</h1>
+<h2>Wyświetlenie wszystkich elementów:</h2>
+<ul>
+  <li *ngFor="let item of list">{{ item }}</li>
+</ul>
+
+<h2>Wyświetlenie z indeksem:</h2>
+<ul>
+  <li *ngFor="let item of list; let i = index">{{ i }}. {{ item }}</li>
+</ul>
+
+<h2>Wyświetla pierwszy i ostatni index:</h2>
+<ul>
+  <ng-container *ngFor="let item of list; let first = first; let last = last">
+    <li *ngIf="first">
+      {{ item }}
+    </li>
+    <li *ngIf="last">
+      {{ item }}
+    </li>
+  </ng-container>
+</ul>
+
+<h2>Wyświetlenie parzysty i nieparzysty index:</h2>
+<ul>
+  <ng-container *ngFor="let item of list; let even = even; let odd = odd">
+    <li style="color: green" *ngIf="even">
+      {{ item }}
+    </li>
+    <li style="color: orangered" *ngIf="odd">
+      {{ item }}
+    </li>
+  </ng-container>
+</ul>
+
+<h2>Wyświetlenie kluczy i wartości obiektów, (sortowanie po kluczu):</h2>
+{{ weeks | json }}
+<ul>
+  <li *ngFor="let item of weeks | keyvalue">
+    {{ item.key }} - {{ item.value }}
+  </li>
+</ul>
+
+<hr>
+
+<h1>Ćwiczenia z *ngFor</h1>
+
+<h2>1. Wypisz tablicę 'frameworks' za pomocą *ngFor i dodaj index:</h2>
+<ul>
+  <li *ngFor="let framework of frameworks; let i = index">
+    {{ i + 1 }}. {{ framework }}
+  </li>
+</ul>
+
+<br />
+
+<h2>2. Wypisz model i markę samochodu z tablicy 'cars' za pomocą *ngFor:</h2>
+<ul>
+  <li *ngFor="let car of cars">{{ car.mark }} - {{ car.model }}</li>
+</ul>
+
+<br />
+
+<h2>
+  3. Wypisz model i markę samochodu z obiektu 'carsObj' za pomocą *ngFor i pipe
+  keyvalue:
+</h2>
+<ul>
+  <li *ngFor="let car of carsObj | keyvalue">
+    {{ car.key }} - {{ car.value }}
+  </li>
+</ul>
+
+<br />
+
+<h2>
+  4. Wypisz z tablicy 'frameworks' tylko pierwszy i ostatni element. Dodatkowo
+  należy użyć *ngIf:
+</h2>
+<ul>
+  <ng-container
+    *ngFor="let framework of frameworks; let first = first; let last = last"
+  >
+    <li *ngIf="first">{{ framework }}</li>
+    <li *ngIf="last">{{ framework }}</li>
+  </ng-container>
+</ul>
+
+<h2>
+  5. Wypisz z tablicy 'frameworks' elementy, które mają parzysty indeks.
+  Dodatkowo należy użyć *ngIf (jeżeli już wiesz jak używać):
+</h2>
+<ul>
+  <ng-container
+    *ngFor="let framework of frameworks; let even = even; let i = index"
+  >
+    <li *ngIf="even">{{ i }} - {{ framework }}</li>
+  </ng-container>
+</ul>
+
+<h2>
+  6. Wypisz z w pętli obiektu 'persons' dla każdego użytkownika: Id, name, city,
+  company name:
+</h2>
+<ul>
+  <li *ngFor="let p of persons">
+    {{ p.id }} - {{ p.name }} - {{ p?.address?.city }} - {{ p?.company?.name }}
+  </li>
+</ul>
