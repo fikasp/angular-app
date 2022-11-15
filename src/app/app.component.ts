@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Task } from './interfaces/task';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -8,28 +9,10 @@ import { Task } from './interfaces/task';
 })
 export class AppComponent {
 
-  config: { [key: string]: string } | null  = null;
-
-  tasks: Task[] = [
-    {
-      name: 'Siłownia',
-      deadline: '2020-01-02',
-      done: false,
-    },
-    {
-      name: 'Nauka Angulara',
-      deadline: '2020-01-03',
-      done: false,
-    },
-  ];
-
-  constructor() {
-    setTimeout( () => {
-      this.config = {
-        title: 'Lista zadań',
-        footer: '© Lista zadań zbudowana w Angularze.',
-        date: new Date().toDateString(),
-      };
-    }, 500);
-  }
+  constructor(
+    private location: Location,
+    private route: ActivatedRoute,
+    private router: Router,
+  ){} 
+  
 }
