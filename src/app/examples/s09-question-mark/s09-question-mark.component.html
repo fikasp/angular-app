@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Question Mark - ?</h2>
+  <h3>
+    1. Obiekt pojawi się za 3 sekundy, ale dzięki question mark można wyświetlić
+    pole 'name': {{ dog?.name }}
+  </h3>
+
+  <h3>2. Zastąpienie przez ngIf:</h3>
+  <span *ngIf="dog && dog.name">{{ dog?.name }}</span>
+
+  <!-- <h3>3. Opcja question mark i property binding:</h3>
+  <app-dog-name [name]="dog?.name"></app-dog-name> -->
+
+  <h3 #element>4. Zagnieżdżone obiekty</h3>
+    {{ element.firstChild?.firstChild?.textContent?.toUpperCase() }}
+</div>
