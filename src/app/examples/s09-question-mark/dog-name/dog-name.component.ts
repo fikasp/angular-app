@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
     <span>{{ name }}</span>
   `,
 })
-export class DogNameComponent {
+export class S09DogNameComponent {
   @Input() name: string | undefined;
 }

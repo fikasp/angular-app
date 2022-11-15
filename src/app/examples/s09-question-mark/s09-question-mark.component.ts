@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class S09QuestionMarkComponent {
 
-  dog: Animal | undefined;
+  dog!: Animal;
 
   constructor() {
     setTimeout(() => {
