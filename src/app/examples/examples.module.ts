@@ -9,6 +9,6 @@ import { S10NgForComponent } from './s10-ng-for/s10-ng-for.component';
     CommonModule
   ],
   declarations: [S09DogNameComponent, S09QuestionMarkComponent, S10NgForComponent],
-  exports: [S09DogNameComponent, S09QuestionMarkComponent, S10NgForComponent]
+  exports: []
 })
 export class ExamplesModule { }

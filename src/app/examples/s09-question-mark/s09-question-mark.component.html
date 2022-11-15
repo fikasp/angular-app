@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Question Mark - ?</h2>
+  <h1>Question Mark - ?</h1>
   <h3>
     1. Obiekt pojawi się za 3 sekundy, ale dzięki question mark można wyświetlić
     pole 'name': {{ dog?.name }}
@@ -13,4 +13,24 @@
 
   <h3 #element>4. Zagnieżdżone obiekty</h3>
     {{ element.firstChild?.firstChild?.textContent?.toUpperCase() }}
+
+  <hr>
+
+  <h1>Ćwiczenia z question mark '?'</h1>
+  <h3>
+    1. Wyświetl pole 'text' z obiektu 'someObject'. W konsoli przeglądarki nie
+    mogą się pojawić żadne błędy
+  </h3>
+  <p>Wynik: {{ someObject?.text }}</p>
+
+  <h3>
+    1. Wyświetl pole 'info' z obiektu 'data', który znajduje się w obiekcie
+    'someObject'
+  </h3>
+  <p>Wynik: {{someObject?.data?.info }}</p>
+
+  <h3>2. Jeżeli znasz *ngIf zrób to samo z użyciem *ngIf</h3>
+  <p *ngIf="someObject">Wynik: {{ someObject.text }}</p>
+  <p *ngIf="someObject && someObject.data">Wynik: {{ someObject.data.info }}</p>
+
 </div>
