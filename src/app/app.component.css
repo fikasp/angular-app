@@ -10,3 +10,18 @@
   width: 80%;
 }
 
+.bold {
+  font-weight: 700;
+}
+
+.menu {
+  display: block;
+}
+
+ul {
+  display: block;
+}
+
+li {
+  display: block;
+}
