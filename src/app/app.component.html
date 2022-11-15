@@ -1,7 +1,7 @@
 <div class="container">
   <nav class="row blue">
     <div class="nav-wrapper">
-      <span class="brand-logo center">{{title}}</span>
+      <span class="brand-logo center">{{config?.['title']}}</span>
     </div>
   </nav>
 
@@ -17,8 +17,10 @@
   </div>
 
   <ul class="collection">
-    <li class="collection-item row">
-      <span class="col s9">Synchronizacja Stackblitz z GitHub</span>
+    <li class="collection-item row" *ngFor="let task of tasks; let i = index">
+      <span class="col s9">
+        {{ i + 1 }}. {{ task.name }} -
+        {{ task.deadline | date: 'd.MM EEEE' }}</span>
       <div class="col s3 right-align">
         <button class="btn-floating btn-small red">
           <i class="material-icons">remove</i>
@@ -40,7 +42,7 @@
   <footer class="page-footer mt-5 light-blue">
     <div class="footer-copyright blue">
       <div class="container center">
-      {{ getDate() | date:'yyyy-MM-dd'}} © Lista zadań - All rights reserved.
+      {{ config?.['date'] | date:'yyyy-MM-dd'}} {{config?.['footer']}}
       </div>
     </div>
   </footer>

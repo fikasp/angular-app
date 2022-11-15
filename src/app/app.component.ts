@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Task } from './interfaces/task';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Lista zadań';
 
-  getDate(): Date {
-    return new Date();
+  config: { [key: string]: string } | null  = null;
+
+  tasks: Task[] = [
+    {
+      name: 'Siłownia',
+      deadline: '2020-01-02',
+      done: false,
+    },
+    {
+      name: 'Nauka Angulara',
+      deadline: '2020-01-03',
+      done: false,
+    },
+  ];
+
+  constructor() {
+    setTimeout( () => {
+      this.config = {
+        title: 'Lista zadań',
+        footer: '© Lista zadań zbudowana w Angularze.',
+        date: new Date().toDateString(),
+      };
+    }, 500);
   }
 }
