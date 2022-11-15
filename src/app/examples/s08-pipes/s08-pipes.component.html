@@ -3,8 +3,7 @@
 
 <h3>Lokalizacja</h3>
 <p>{{ 'Sun Jul 15 1410 00:00:00' | date: 'fullDate' }}</p>
-<p>{{ 'Sun Jul 15 1410 00:00:00' | date: 'fullDate':'':'pl' }}</p>
-<p>{{ 'Sun Jul 15 1410 00:00:00' | date: 'fullDate':'':'bn' }}</p>
+<p>{{ 'Sun Jul 15 1410 00:00:00' | date: 'fullDate':'':'en-US' }}</p>
 
 <h3>Łączenie pipe</h3>
 <p>{{ 'Sun Jul 15 1410 00:00:00' | date: 'fullDate' | uppercase }}</p>
@@ -14,16 +13,12 @@
 <p>Bez formatowania: {{ num }}</p>
 <p>Format: {{ num | number }}</p>
 <p>
-  Format z określeniem miejsc po przecinku (lokalizacja default en-US):
+  Format z określeniem miejsc po przecinku (lokalizacja pl):
   {{ num | number: '2.4-5' }}
 </p>
 <p>
-  Format z określeniem miejsc po przecinku(lokalizacja pl):
-  {{ num | number: '2.4-5':'pl' }}
-</p>
-<p>
-  Format z określeniem miejsc po przecinku(lokalizacja bn):
-  {{ num | number: '2.4-5':'bn' }}
+  Format z określeniem miejsc po przecinku(lokalizacja en-US):
+  {{ num | number: '2.4-5':'en-US' }}
 </p>
 <p>Liczba całkowita: {{ num | number: '1.0-0' }}</p>
 
@@ -49,7 +44,6 @@
 <p>{{ price | currency: 'PLN' }}</p>
 <p>{{ price | currency: 'PLN':'symbol':'':'pl' }}</p>
 <p>{{ price | currency: 'USD':'symbol-narrow':'':'pl' }}</p>
-<p>{{ price | currency: 'USD':'symbol':'':'bn' }}</p>
 
 <!-- https://angular.io/api/common/JsonPipe -->
 <h3>JsonPipe - możmy wyświetlić JSON format</h3>
@@ -60,7 +54,7 @@
 <h3>PercentPie - formatowanie zapisy procentowego</h3>
 <p>0.01 to: {{ 0.01 | percent }}</p>
 <p>1.113 to: {{ 1.113 | percent: '2.2-2' }}</p>
-<p>1.113 to: {{ 1.113 | percent: '2.2-2':'pl' }}</p>
+<p>1.113 to: {{ 1.113 | percent: '2.2-2':'en-US' }}</p>
 
 <!--  https://angular.io/api/common/DatePipe -->
 <h3>DatePipe - formatowanie dat</h3>

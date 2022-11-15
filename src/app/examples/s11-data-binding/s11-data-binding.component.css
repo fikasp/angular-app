@@ -1,0 +1,37 @@
+.font {
+  font-family: Lato;
+  font-style: italic;
+}
+
+.card{
+  height: 100px;
+  width: 100%;
+  background:antiquewhite;
+}
+
+h1{ 
+  font-size: 38px;
+}
+
+button {
+  background-color: cadetblue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+button:disabled {
+ background:lightgrey
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
