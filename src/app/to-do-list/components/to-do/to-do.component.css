@@ -1,5 +1,19 @@
 @import "node_modules/materialize-css/dist/css/materialize.css";
 
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
 .ml-5 {
   margin-left: 5px;
 }

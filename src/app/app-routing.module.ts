@@ -5,8 +5,9 @@ import { ToDoComponent } from './to-do-list/components/to-do/to-do.component';
 
 const routes: Routes = [
     {path: '', component: ToDoComponent},
-    {path: '', pathMatch: 'full', redirectTo: 'NazwaKomponentu'},
-    {path: 'ngfor', component: S10NgForComponent},
+    {path: '00', component: ToDoComponent},
+    {path: '09', component: S10NgForComponent},
+    {path: '10', component: S10NgForComponent},
   ];
   
 
