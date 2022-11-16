@@ -7,6 +7,6 @@ import { ToDoComponent } from './components/to-do/to-do.component';
     CommonModule
   ],
   declarations: [ToDoComponent],
-  exports: [ToDoComponent]
+  exports: []
 })
 export class ToDoListModule { }
