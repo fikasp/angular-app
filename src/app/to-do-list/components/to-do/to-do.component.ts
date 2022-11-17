@@ -27,7 +27,7 @@ export class ToDoComponent {
     setTimeout( () => {
       this.config = {
         title: 'Lista zadań',
-        footer: '© Lista zadań zbudowana w Angularze.',
+        footer: '© ARW',
         date: new Date().toDateString(),
       };
     }, 500);

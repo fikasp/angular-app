@@ -7,14 +7,15 @@
     </nav>
 
     <div class="row">
-      <button class="btn col s5">Dodaj zadanie</button>
-      <button class="btn col s5 offset-s2">Zakończ</button>
+      <button class="btn col s4">Dodaj zadanie</button>
+      <button class="btn col s4">Zakończ</button>
+      <button class="btn col s4">Wyczyść</button>
     </div>
 
     <div class="row">
-      <input class="col s9" type="text" placeholder="Dodaj zadanie i datę wykonania"/>
-      <input class="col s2 disabled" type="date" />
-      <button class="btn-floating">+</button>
+      <input class="col s8" type="text" placeholder="Dodaj zadanie i datę wykonania"/>
+      <input class="col s4 disabled" type="date" />
+      <!-- <button class="btn-floating">+</button> -->
     </div>
 
     <ul class="collection">
@@ -24,10 +25,10 @@
           {{ task.deadline | date: 'd.MM EEEE' }}</span>
         <div class="col s3 right-align">
           <button class="btn-floating btn-small red">
-            <i class="material-icons">-</i>
+            <i class="fa-solid fa-minus"></i>
           </button>
           <button class="btn-floating btn-small green ml-5">
-            <i class="material-icons">ok</i>
+            <i class="fa-solid fa-check"></i>
           </button>
         </div>
       </li>
@@ -38,9 +39,8 @@
 
     <h5>Dzisiaj brak zadań :-)</h5>
 
-    <button class="btn">Wyczyść</button>
 
-    <footer class="page-footer mt-5 light-blue">
+    <footer class="page-footer light-blue">
       <div class="footer-copyright blue">
         <div class="container center">
         {{ config?.['date'] | date:'yyyy-MM-dd'}} {{config?.['footer']}}
