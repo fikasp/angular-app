@@ -36,3 +36,11 @@ input[type='date'].disabled::-webkit-inner-spin-button {
   height: 500px;
   max-height: 500px;
 }
+
+.footer {
+  margin-top: 20px;
+  padding: 10px 0px;
+  color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
