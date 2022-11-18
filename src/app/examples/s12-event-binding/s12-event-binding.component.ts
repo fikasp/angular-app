@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class S12EventBindingComponent {
 
-  text = '';
+  text: string = '';
   mousePosition = '';
   enterList: string[] = [];
   scale = 1;
@@ -15,6 +15,10 @@ export class S12EventBindingComponent {
 
   onClickButton() {
     alert('Button clicked :)');
+  }
+
+  setText($event: any) {
+    this.text = $event.target.value;
   }
 
   onEnter(value: string) {
