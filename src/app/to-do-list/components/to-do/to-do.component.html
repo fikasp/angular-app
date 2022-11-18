@@ -7,13 +7,13 @@
     </nav>
 
     <div class="row">
-      <button class="btn col s4">Dodaj zadanie</button>
+      <button class="btn col s4" (click)="createTask()">Dodaj zadanie</button>
       <button class="btn col s4">Zakończ</button>
-      <button class="btn col s4">Wyczyść</button>
+      <button class="btn col s4" (click)="clearTasks()">Wyczyść</button>
     </div>
 
     <div class="row">
-      <input class="col s8" type="text" placeholder="Dodaj zadanie i datę wykonania"/>
+      <input class="col s8" type="text" placeholder="Dodaj zadanie i datę wykonania" (keyup)="onKeyUp($event)"/>
       <input class="col s4 disabled" type="date" />
       <!-- <button class="btn-floating">+</button> -->
     </div>

@@ -10,6 +10,7 @@ export class ToDoComponent {
 
   config: { [key: string]: string } | null  = null;
 
+  taskName: string = "";
   tasks: Task[] = [
     {
       name: 'Siłownia',
@@ -32,4 +33,23 @@ export class ToDoComponent {
       };
     }, 500);
   }
+
+  clearTasks() {
+    this.tasks = [];
+  }
+
+  createTask() {
+    const task: Task = {
+      name: this.taskName,
+      deadline: '2020-02-02',
+      done: false,
+    };
+    this.tasks.push(task);
+  }
+
+  onKeyUp(event: KeyboardEvent) {
+    const target = event.target as HTMLInputElement;
+    this.taskName = target.value;
+  }
+
 }
