@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.checkOverflow()
     window.addEventListener("resize", this.checkOverflow)
+    console.log()
   }
 
   checkOverflow() {
