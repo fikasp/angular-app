@@ -5,11 +5,22 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './s13-template-reference.component.html',
   styleUrls: ['./s13-template-reference.component.css']
 })
-export class S13TemplateReferenceComponent implements OnInit {
+export class S13TemplateReferenceComponent {
 
-  constructor() { }
+  textField?: string;
+  startTyping?: string;
+  direction?: string;
 
-  ngOnInit() {
+   done() {
+     console.log('Zrobione!');
+   }
+
+  wheelDirection(deltaY: number) {
+    if (deltaY > 0) {
+      this.direction = 'Kręcisz się w dół';
+    } else if (deltaY < 0) {
+      this.direction = 'Kręcisz się w górę';
+    }
   }
 
 }

@@ -1,0 +1,34 @@
+<h2>Ćwiczenia z Event Binding</h2>
+<p>1. Zbinduj metodę do eventu click, która wypisze do konsoli: 'Zrobione!'</p>
+<button class="btn" (click)="done()">Done!</button>
+
+<p>
+  2. Wykorzystaj jakiś event na polu input i pobierz wartość wpisywaną do pola.
+  Wartość ma się pojawiać pod spodem w czasie wpisywania.
+</p>
+<input
+  placeholder="Zacznij pisać"
+  #inputText
+  (keydown)="textField = inputText.value"
+/>
+{{ textField }}
+
+<p>
+  3. Gdy kliknie się w pole tekstowe, powinna pojawić się informacja: 'Zacznij
+  pisać'. Gdy wyjdziemy z pola, napis powinien znikać.
+</p>
+<input
+  placeholder="Zacznij pisać"
+  (click)="startTyping = 'Zacznij pisać'"
+  (focusout)="startTyping = ''"
+/>
+{{ startTyping }}
+
+<p>
+  4. Ambitne! Na elemencie div wykorzystaj event 'wheel'. Stwórz metodę, która
+  rozpozna czy, kółko myszki kręci się do góry czy do dołu. Informację wypisz w
+  elemencie div.
+</p>
+<div class="mouse-container" (wheel)="wheelDirection($event.deltaY)">
+  {{ direction }}
+</div>
