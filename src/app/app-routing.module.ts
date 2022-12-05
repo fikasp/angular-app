@@ -9,6 +9,7 @@ import { S09QuestionMarkComponent } from './examples/s09-question-mark/s09-quest
 import { S10NgForComponent } from './examples/s10-ng-for/s10-ng-for.component';
 import { S11DataBindingComponent } from './examples/s11-data-binding/s11-data-binding.component';
 import { S12EventBindingComponent } from './examples/s12-event-binding/s12-event-binding.component';
+import { S13TemplateReferenceComponent } from './examples/s13-template-reference/s13-template-reference.component';
 
 const routes: Routes = [
     {path: '', component: ToDoComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
     {path: '10', component: S10NgForComponent},
     {path: '11', component: S11DataBindingComponent},
     {path: '12', component: S12EventBindingComponent},
+    {path: '13', component: S13TemplateReferenceComponent},
   ];
   
 

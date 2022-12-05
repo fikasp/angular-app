@@ -8,6 +8,7 @@ import { S09DogNameComponent } from './s09-question-mark/dog-name/dog-name.compo
 import { S10NgForComponent } from './s10-ng-for/s10-ng-for.component';
 import { S11DataBindingComponent } from './s11-data-binding/s11-data-binding.component';
 import { S12EventBindingComponent } from './s12-event-binding/s12-event-binding.component';
+import { S13TemplateReferenceComponent } from './s13-template-reference/s13-template-reference.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { S12EventBindingComponent } from './s12-event-binding/s12-event-binding.
     S10NgForComponent,
     S11DataBindingComponent,
     S12EventBindingComponent,
+    S13TemplateReferenceComponent,
   ],
   exports: []
 })

@@ -10,7 +10,6 @@ export class ToDoComponent {
 
   config: { [key: string]: string } | null  = null;
 
-  taskName: string = "";
   tasks: Task[] = [
     {
       name: 'Siłownia',
@@ -38,18 +37,13 @@ export class ToDoComponent {
     this.tasks = [];
   }
 
-  createTask() {
+  createTask(name: string, deadline: string) {
     const task: Task = {
-      name: this.taskName,
-      deadline: '2020-02-02',
+      name,
+      deadline,
       done: false,
     };
     this.tasks.push(task);
-  }
-
-  onKeyUp(event: KeyboardEvent) {
-    const target = event.target as HTMLInputElement;
-    this.taskName = target.value;
   }
 
 }
