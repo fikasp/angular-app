@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class S14PropertyBindingComponent {
 
-  imageURL = '/assets/logo-b1a300e55fb8d38e1cccab1b7754a10b.png';
+  imageURL = 'logo.png';
 
   isDisabled = false;
   counter = 2;
