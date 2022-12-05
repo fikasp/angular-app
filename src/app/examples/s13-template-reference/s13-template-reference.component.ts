@@ -11,9 +11,9 @@ export class S13TemplateReferenceComponent {
   startTyping?: string;
   direction?: string;
 
-   done() {
-     console.log('Zrobione!');
-   }
+  done() {
+    console.log('Zrobione!');
+  }
 
   wheelDirection(deltaY: number) {
     if (deltaY > 0) {
