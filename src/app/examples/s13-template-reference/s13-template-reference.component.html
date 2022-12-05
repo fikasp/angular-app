@@ -1,6 +1,6 @@
 <h2>Ćwiczenia z Event Binding</h2>
 <p>1. Zbinduj metodę do eventu click, która wypisze do konsoli: 'Zrobione!'</p>
-<button class="btn" (click)="done()">Done!</button>
+<button class="btn" (click)="done()">Done!</button> {{ doneText }}
 
 <p>
   2. Wykorzystaj jakiś event na polu input i pobierz wartość wpisywaną do pola.
@@ -9,7 +9,7 @@
 <input
   placeholder="Zacznij pisać"
   #inputText
-  (keydown)="textField = inputText.value"
+  (input)="textField = inputText.value"
 />
 {{ textField }}
 

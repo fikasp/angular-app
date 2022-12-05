@@ -10,6 +10,7 @@ import { S10NgForComponent } from './examples/s10-ng-for/s10-ng-for.component';
 import { S11DataBindingComponent } from './examples/s11-data-binding/s11-data-binding.component';
 import { S12EventBindingComponent } from './examples/s12-event-binding/s12-event-binding.component';
 import { S13TemplateReferenceComponent } from './examples/s13-template-reference/s13-template-reference.component';
+import { S14PropertyBindingComponent } from './examples/s14-property-binding/s14-property-binding.component';
 
 const routes: Routes = [
     {path: '', component: ToDoComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
     {path: '11', component: S11DataBindingComponent},
     {path: '12', component: S12EventBindingComponent},
     {path: '13', component: S13TemplateReferenceComponent},
+    {path: '14', component: S14PropertyBindingComponent},
   ];
   
 

@@ -8,25 +8,36 @@
 
     <div class="row">
       <button class="btn col s4" 
+       [disabled]="nameInput.value === '' || dateInput.value === ''"
        (click)="
         createTask(nameInput.value, dateInput.value); 
         nameInput.value = ''; 
         dateInput.value = ''
         ">
-        Dodaj zadanie
+        Dodaj
       </button>
       <button class="btn col s4">
         Zakończ
       </button>
       <button class="btn col s4" 
-        (click)="clearTasks()">
+        (click)="clearTasks()"
+        [disabled]="tasks.length === 0">
         Wyczyść
       </button>
     </div>
 
     <div class="row">
-      <input class="col s8" type="text" placeholder="Dodaj zadanie i datę wykonania" #nameInput />
-      <input class="col s4 disabled" type="date" #dateInput/>
+      <input 
+        (keyup) = "0" 
+        class="col s8" 
+        type="text" 
+        placeholder="Dodaj zadanie i datę wykonania" 
+        #nameInput />
+      <input 
+        (change) = "0" 
+        class="col s4 disabled" 
+        type="date" 
+        #dateInput/>
     </div>
 
     <ul class="collection">

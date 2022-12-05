@@ -1,0 +1,27 @@
+<div class="container">
+<img [src]="imageURL" />
+
+<button [disabled]="counter > 1">Button</button>
+
+<input [value]="inputValue" />
+
+<textarea [rows]="rowsNum" [cols]="colsNum" [style.background]="color">
+</textarea>
+
+<!-- Bindowanie stałej wartości ma dodatkowe cudzysłowia -->
+<input [value]="'Kupić cukier'" />
+
+<!-- Stałą wartość bindujemy do atrybutu -->
+<input value="Kupić cukier" />
+
+<!-- Błąd, pole w klasie bindowane do atrybutu -->
+<img src="imageURL" />
+
+<!-- Bindowanie z interpolacją -->
+<img src="{{ imageURL }}" />
+
+<!-- Bindowanie innych typów niż string może dać odmienny rezultat w interpolacji -->
+<button disabled="{{ isDisabled }}">Button</button>
+
+{{ isDisabled }}
+</div>

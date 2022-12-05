@@ -7,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class S13TemplateReferenceComponent {
 
+  doneText?: string;
   textField?: string;
   startTyping?: string;
   direction?: string;
 
   done() {
-    console.log('Zrobione!');
+    this.doneText = "Zrobione!"
+    console.log(this.doneText);
   }
 
   wheelDirection(deltaY: number) {
