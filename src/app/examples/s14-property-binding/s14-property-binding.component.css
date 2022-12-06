@@ -1,11 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 600px;
-  max-width: 500px;
+  min-height: 300px;
+  max-width: 300px;
 }
-* {
+img, textarea, input, button {
   padding: 10px;
   margin: 10px;
   font-size: 21px;
 }
+

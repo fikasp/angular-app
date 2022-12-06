@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class S14PropertyBindingComponent {
 
-  imageURL = 'logo.png';
+  imageURL = '../../../assets/logo.png';
 
   isDisabled = false;
   counter = 2;
   inputValue = 'Example Text';
-  rowsNum = 14;
+  rowsNum = 6;
   colsNum = 6;
   color = 'burlywood';
 

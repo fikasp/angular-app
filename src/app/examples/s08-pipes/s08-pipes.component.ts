@@ -7,7 +7,7 @@ import { Component, Inject, LOCALE_ID } from '@angular/core';
 })
 export class S08PipesComponent {
 
-  title = `PRZYKŁADY PIPE'ÓW`;
+  title = `Pipes`;
   someDate = Date.now();
   words = ['jeden', 'dwa', 'trzy', 'cztery'];
   num = 8.7237823462034243;

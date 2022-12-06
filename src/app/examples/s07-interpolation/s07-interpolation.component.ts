@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class S07InterpolationComponent {
 
-  title = 'Przykłady interpolacji';
+  title = 'Interpolacja';
   happy = true;
   dog = { name: 'Reksio' };
 
