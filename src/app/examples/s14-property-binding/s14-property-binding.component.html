@@ -26,3 +26,97 @@
 
 {{ isDisabled }}
 </div>
+
+<hr>
+
+<div class="container">
+
+<h1>Zadanie 1</h1>
+<ol>
+  <li>Stwórz element DIV.</li>
+  <li>Stwórz w komponencie pole z nazwą koloru np: color = 'red'</li>
+  <li>
+    Przez property binding zbinduje kolor zmieniając tło w elemencie DIV
+  </li>
+</ol>
+<h3>Przykład działania:</h3>
+<div style="height: 50px; width: 800px" [style.background]="blackDiv"></div>
+
+<h1>Zadanie 2</h1>
+<ol>
+  <li>Stwórz podobny element DIV co wyżej o kolorze żółtym.</li>
+  <li>Za pomocą przycisku, podmień kolor na czerwony.</li>
+</ol>
+<h3>Przykład działania:</h3>
+<div style="height: 50px; width: 500px" [style.background]="yellowDiv"></div>
+<button class="btn" (click)="yellowDiv = 'red'">Zmiana</button>
+
+<h1>Zadanie 3</h1>
+<ol>
+  <li>Stwórz element input.</li>
+  <li>
+    Stwórz pole w klasie komponentu nap przykład z napisem: 'Wpisz coś'.
+  </li>
+  <li>Zbinduj to pole z klasy z elementem input.</li>
+  <li>Gdy kliknie się w pole tekstowe, napis powinien znikać.</li>
+</ol>
+
+<h3>Przykład działania:</h3>
+<input [value]="text" (focusin)="text = ''" />
+
+<h1>Zadanie 4</h1>
+<ol>
+  <li>Wykorzystaj poniższy kod HTML</li>
+  <li>Przypisz go do pola w klasie komponentu</li>
+  <li>Zbinduj pole do elementu div</li>
+</ol>
+<textarea disabled rows="4">
+<h2>Anglar jest fajny</h2><blockquote>Ale trzeba się dużo uczyć</blockquote>
+</textarea>
+<h3>Przykład działania:</h3>
+<div [innerHTML]="htmlText"></div>
+
+<h1>Zadanie 5</h1>
+<ol>
+  <li>Ambitne!</li>
+  <li>Dwa przyciski powinny się na wzajem przełączać.</li>
+  <li>Gdy jeden jest wyłączony, drugi powinien być włączony.</li>
+</ol>
+
+<h3>Przykład działania:</h3>
+<button
+  class="btn"
+  [disabled]="isDisabled"
+  (click)="isDisabled = !isDisabled"
+>
+  Pierwszy
+</button>
+<button
+  class="btn"
+  [disabled]="!isDisabled"
+  (click)="isDisabled = !isDisabled"
+>
+  Drugi
+</button>
+
+<h1>Zadanie 6</h1>
+<ol>
+  <li>Stwórz zielony element DIV.</li>
+  <li>Za pomocą przycisku zmieniaj kolor na niebieski.</li>
+  <li>Przycisk powinien pozwalać zmieniać kolor na przemian.</li>
+  <li>Do obsługi może wystarczyć nawet jedno pole w klasie komponentu.</li>
+</ol>
+
+Podgląd:
+<div
+  style="height: 50px; width: 500px"
+  [style.background]="colorSwitch"
+></div>
+<button
+  class="btn"
+  (click)="colorSwitch = colorSwitch === 'green' ? 'blue' : 'green'"
+>
+  Zmiana
+</button>
+</div>
+

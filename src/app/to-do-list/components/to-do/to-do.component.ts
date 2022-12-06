@@ -8,6 +8,9 @@ import { Task } from '../../interfaces/task';
 })
 export class ToDoComponent {
 
+  taskName = 'Przykładowe zadanie'
+  taskDate = ''
+
   config: { [key: string]: string } | null  = null;
 
   tasks: Task[] = [
@@ -37,13 +40,15 @@ export class ToDoComponent {
     this.tasks = [];
   }
 
-  createTask(name: string, deadline: string) {
+  createTask() {
     const task: Task = {
-      name,
-      deadline,
+      name: this.taskName,
+      deadline: this.taskDate,
       done: false,
     };
     this.tasks.push(task);
+    this.taskName = '';
+    this.taskDate = '';
   }
 
 }
