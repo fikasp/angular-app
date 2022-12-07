@@ -9,6 +9,8 @@ import { S10NgForComponent } from './s10-ng-for/s10-ng-for.component';
 import { S11DataBindingComponent } from './s11-data-binding/s11-data-binding.component';
 import { S12EventBindingComponent } from './s12-event-binding/s12-event-binding.component';
 import { S13TemplateReferenceComponent } from './s13-template-reference/s13-template-reference.component';
+import { S14PropertyBindingComponent } from './s14-property-binding/s14-property-binding.component';
+import { S15TwoWayBindingComponent } from './s15-two-way-binding/s15-two-way-binding.component';
 
 @NgModule({
   imports: [
@@ -23,6 +25,8 @@ import { S13TemplateReferenceComponent } from './s13-template-reference/s13-temp
     S11DataBindingComponent,
     S12EventBindingComponent,
     S13TemplateReferenceComponent,
+    S14PropertyBindingComponent,
+    S15TwoWayBindingComponent,
   ],
   exports: []
 })
