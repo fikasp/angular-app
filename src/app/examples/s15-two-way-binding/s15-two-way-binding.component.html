@@ -1,0 +1,23 @@
+<div class="container">
+<h1>Działanie ngModel w szczegółach</h1>
+
+<!-- <input
+  placeholder="Name"
+  type="text"
+  [value]="name"
+  (input)="name = $event.target.value"
+/> -->
+
+<input placeholder="Surname" type="text" [(ngModel)]="surname" />
+
+<input
+  placeholder="Profession"
+  type="text"
+  [ngModel]="profession"
+  (ngModelChange)="profession = $event"
+/>
+
+<button (click)="onSend()">Send</button>
+
+<p>{{ info }}</p>
+</div>

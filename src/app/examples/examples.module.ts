@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { S07InterpolationComponent } from './s07-interpolation/s07-interpolation.component';
 import { S08PipesComponent } from './s08-pipes/s08-pipes.component';
@@ -14,7 +15,7 @@ import { S15TwoWayBindingComponent } from './s15-two-way-binding/s15-two-way-bin
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, FormsModule
   ],
   declarations: [
     S07InterpolationComponent, 

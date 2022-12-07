@@ -5,11 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './s15-two-way-binding.component.html',
   styleUrls: ['./s15-two-way-binding.component.css']
 })
-export class S15TwoWayBindingComponent implements OnInit {
+export class S15TwoWayBindingComponent {
 
-  constructor() { }
+  name = '';
+  surname = '';
+  profession = '';
 
-  ngOnInit() {
+  info?: string;
+
+  onSend() {
+    this.info = `${this.name} ${this.surname} ${this.profession}`;
+    this.name = '';
+    this.surname = '';
+    this.profession = '';
   }
 
 }
