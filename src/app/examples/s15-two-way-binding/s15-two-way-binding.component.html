@@ -1,12 +1,4 @@
-<div class="container">
-<h1>Działanie ngModel w szczegółach</h1>
-
-<!-- <input
-  placeholder="Name"
-  type="text"
-  [value]="name"
-  (input)="name = $event.target.value"
-/> -->
+<h1>Two-way binding</h1>
 
 <input placeholder="Surname" type="text" [(ngModel)]="surname" />
 
@@ -20,4 +12,20 @@
 <button (click)="onSend()">Send</button>
 
 <p>{{ info }}</p>
+
+<h1>Ng Model</h1>
+<h3>Stwórz formularz na wzór pokazany niżej.</h3>
+<ul>
+  <li>
+    Przycisk `Send` jest zablokowany dopóki nie są wypełnione wszystkie pola
+  </li>
+  <li>Przycisk po naciśnięciu drukuje informacje niżej i czyści pola</li>
+</ul>
+
+<div class="container">
+  <input placeholder="Name" type="text" [(ngModel)]="name" />
+  <input placeholder="Surname" type="text" [(ngModel)]="surname" />
+  <input placeholder="Age" type="number" [(ngModel)]="age" />
+  <button (click)="print()" [disabled]="isDisable()">Send</button>
+  <p>{{ summary }}</p>
 </div>

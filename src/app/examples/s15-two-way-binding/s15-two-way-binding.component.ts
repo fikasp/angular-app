@@ -20,4 +20,18 @@ export class S15TwoWayBindingComponent {
     this.profession = '';
   }
 
+  age?: number | null;
+  summary = '';
+
+  isDisable() {
+    return this.name === '' || this.surname === '' || this.age === null;
+  }
+
+  print() {
+    this.summary = `${this.name} - ${this.surname} - ${this.age}`;
+    this.name = '';
+    this.surname = '';
+    this.age = null;
+  }
+
 }
