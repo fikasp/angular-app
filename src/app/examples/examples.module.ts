@@ -12,6 +12,7 @@ import { S12EventBindingComponent } from './s12-event-binding/s12-event-binding.
 import { S13TemplateReferenceComponent } from './s13-template-reference/s13-template-reference.component';
 import { S14PropertyBindingComponent } from './s14-property-binding/s14-property-binding.component';
 import { S15TwoWayBindingComponent } from './s15-two-way-binding/s15-two-way-binding.component';
+import { S16NgIfComponent } from './s16-ng-if/s16-ng-if.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { S15TwoWayBindingComponent } from './s15-two-way-binding/s15-two-way-bin
     S13TemplateReferenceComponent,
     S14PropertyBindingComponent,
     S15TwoWayBindingComponent,
+    S16NgIfComponent,
   ],
   exports: []
 })

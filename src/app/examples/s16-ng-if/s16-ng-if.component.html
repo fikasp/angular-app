@@ -1,0 +1,49 @@
+<div class="container">
+  <h1>Przykłady NgIf, NgSwitch</h1>
+
+  <h2>NgIf vs Visibility</h2>
+  <button *ngIf="show" (click)="show = !show">
+    NgIf Button
+  </button>
+
+  <button #btn (click)="btn.style.visibility = 'hidden'">
+    Visibility Button
+  </button>
+
+  <button>Button</button>
+
+  <h2>Przykład *ngIf, else:</h2>
+
+  <p *ngIf="day === 6; else anotherDay">
+    Dzisiaj jest sobota!
+  </p>
+  <ng-template #anotherDay>
+    <p>Dzisiaj jest inny dzień niż sobota</p>
+  </ng-template>
+
+  <h2>Przykład *ngIf, then, else:</h2>
+  <ng-container
+    *ngIf="day === 6; then saturday; else notSaturday"
+  ></ng-container>
+  <ng-template #saturday>
+    <p>Dzisiaj jest sobota</p>
+  </ng-template>
+  <ng-template #notSaturday>
+    <p>Dzisiaj nie jest sobota</p>
+  </ng-template>
+
+  <ng-container *ngIf="true">
+    <span *ngFor="let i of [1, 2, 3, 4]">{{ i }}</span>
+  </ng-container>
+
+  <h2>Przykład ngSwitch:</h2>
+  <ng-container [ngSwitch]="day">
+    <span *ngSwitchCase="1">Poniedziałek</span>
+    <span *ngSwitchCase="2">Wtorek</span>
+    <span *ngSwitchCase="3">Środa</span>
+    <span *ngSwitchCase="4">Czwartek</span>
+    <span *ngSwitchCase="5">Piątek</span>
+    <span *ngSwitchCase="6">Sobota</span>
+    <span *ngSwitchDefault>To na pewno niedziela!</span>
+  </ng-container>
+</div>

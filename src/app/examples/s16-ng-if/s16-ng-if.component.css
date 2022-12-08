@@ -1,0 +1,25 @@
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+button {
+  background-color: cadetblue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background:lightgrey
+}
+
+p, span {
+  font-size: 20px;
+}

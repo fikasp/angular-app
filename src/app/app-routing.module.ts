@@ -12,6 +12,7 @@ import { S12EventBindingComponent } from './examples/s12-event-binding/s12-event
 import { S13TemplateReferenceComponent } from './examples/s13-template-reference/s13-template-reference.component';
 import { S14PropertyBindingComponent } from './examples/s14-property-binding/s14-property-binding.component';
 import { S15TwoWayBindingComponent } from './examples/s15-two-way-binding/s15-two-way-binding.component';
+import { S16NgIfComponent } from './examples/s16-ng-if/s16-ng-if.component';
 
 const routes: Routes = [
     {path: '', component: ToDoComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
     {path: '13', component: S13TemplateReferenceComponent},
     {path: '14', component: S14PropertyBindingComponent},
     {path: '15', component: S15TwoWayBindingComponent},
+    {path: '16', component: S16NgIfComponent},
   ];
   
 
