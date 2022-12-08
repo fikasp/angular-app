@@ -9,7 +9,7 @@ import { Task } from '../../interfaces/task';
 export class ToDoComponent {
 
   taskName = 'Przykładowe zadanie'
-  taskDate = new Date().toDateString()
+  taskDate = ''
 
   config: { [key: string]: string } | null  = null;
 
@@ -27,6 +27,7 @@ export class ToDoComponent {
   ];
 
   constructor() {
+    console.log(this.taskDate)
     setTimeout( () => {
       this.config = {
         title: 'Lista zadań',
@@ -49,7 +50,6 @@ export class ToDoComponent {
     };
     this.tasks.push(task);
     this.taskName = '';
-    this.taskDate = '';
     this.sortTasks()
   }
 
