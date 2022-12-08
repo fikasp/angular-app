@@ -17,7 +17,7 @@ export class ToDoComponent {
     {
       name: 'Siłownia',
       deadline: '2020-01-02',
-      done: false,
+      done: true,
     },
     {
       name: 'Nauka Angulara',
