@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Przykłady NgIf, NgSwitch</h1>
+  <h1>Dyrektywa *ngIf & *ngSwitch</h1>
 
   <h2>NgIf vs Visibility</h2>
   <button *ngIf="show" (click)="show = !show">
@@ -14,7 +14,7 @@
 
   <h2>Przykład *ngIf, else:</h2>
 
-  <p *ngIf="day === 6; else anotherDay">
+  <p *ngIf="day === 6 else anotherDay">
     Dzisiaj jest sobota!
   </p>
   <ng-template #anotherDay>
@@ -23,7 +23,7 @@
 
   <h2>Przykład *ngIf, then, else:</h2>
   <ng-container
-    *ngIf="day === 6; then saturday; else notSaturday"
+    *ngIf="day === 6 then saturday else notSaturday"
   ></ng-container>
   <ng-template #saturday>
     <p>Dzisiaj jest sobota</p>
@@ -32,6 +32,7 @@
     <p>Dzisiaj nie jest sobota</p>
   </ng-template>
 
+  <h2>Przykład z ngContainer</h2>
   <ng-container *ngIf="true">
     <span *ngFor="let i of [1, 2, 3, 4]">{{ i }}</span>
   </ng-container>
