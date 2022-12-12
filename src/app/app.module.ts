@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { ToDoListModule } from './to-do-list/to-do-list.module';
+import { BestQuotesModule} from './best-quotes/best-quotes.module';
 import { ExamplesModule } from './examples/examples.module';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +17,13 @@ registerLocaleData(localePl);
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, ToDoListModule, ExamplesModule, FormsModule],
+  imports: [
+    BrowserModule, 
+    AppRoutingModule, 
+    ToDoListModule, 
+    BestQuotesModule,
+    ExamplesModule, 
+    FormsModule],
   providers: [{ provide: LOCALE_ID, useValue: 'pl-PL' }],
   bootstrap: [AppComponent],
 })
