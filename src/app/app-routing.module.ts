@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ToDoComponent } from './to-do-list/components/to-do/to-do.component';
+import { BestQuotesComponent } from './best-quotes/components/best-quotes/best-quotes.component';
 
 import { S07InterpolationComponent } from './examples/s07-interpolation/s07-interpolation.component';
 import { S08PipesComponent } from './examples/s08-pipes/s08-pipes.component';
@@ -15,8 +16,9 @@ import { S15TwoWayBindingComponent } from './examples/s15-two-way-binding/s15-tw
 import { S16NgIfComponent } from './examples/s16-ng-if/s16-ng-if.component';
 
 const routes: Routes = [
-    {path: '', component: ToDoComponent},
-    {path: '00', component: ToDoComponent},
+    {path: '', pathMatch: 'full', redirectTo: '02'},
+    {path: '01', component: ToDoComponent},
+    {path: '02', component: BestQuotesComponent},
     {path: '07', component: S07InterpolationComponent},
     {path: '08', component: S08PipesComponent},
     {path: '09', component: S09QuestionMarkComponent},
