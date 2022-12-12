@@ -7,13 +7,13 @@
     </nav>
 
     <div class="row">
-      <button class="btn col s6" 
+      <button class="btn blue col s6" 
        [disabled]="taskName === '' || taskDate === ''"
        (click)="createTask()">
         Dodaj zadanie
       </button>
 
-      <button class="btn col s6" 
+      <button class="btn blue col s6" 
         (click)="clearTasks()"
         [disabled]="tasks.length === 0">
         Wyczyść
