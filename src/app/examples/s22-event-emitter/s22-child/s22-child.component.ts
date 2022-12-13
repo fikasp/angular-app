@@ -2,8 +2,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
-  templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  templateUrl: './s22-child.component.html',
+  styleUrls: ['./s22-child.component.css']
 })
 export class S22ChildComponent {
 
