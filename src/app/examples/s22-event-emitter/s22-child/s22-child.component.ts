@@ -5,7 +5,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent {
+export class S22ChildComponent {
 
   @Output() stringEvent = new EventEmitter<string>();
   @Output() booleanEvent = new EventEmitter<boolean>();

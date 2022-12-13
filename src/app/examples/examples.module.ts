@@ -14,7 +14,7 @@ import { S14PropertyBindingComponent } from './s14-property-binding/s14-property
 import { S15TwoWayBindingComponent } from './s15-two-way-binding/s15-two-way-binding.component';
 import { S16NgIfComponent } from './s16-ng-if/s16-ng-if.component';
 import { S22EventEmitterComponent } from './s22-event-emitter/s22-event-emitter.component';
-import { ChildComponent } from './s22-event-emitter/child/child.component';
+import { S22ChildComponent } from './s22-event-emitter/s22-child/s22-child.component';
 
 @NgModule({
   imports: [
@@ -33,7 +33,7 @@ import { ChildComponent } from './s22-event-emitter/child/child.component';
     S15TwoWayBindingComponent,
     S16NgIfComponent,
     S22EventEmitterComponent,
-    ChildComponent
+    S22ChildComponent
   ],
   exports: []
 })

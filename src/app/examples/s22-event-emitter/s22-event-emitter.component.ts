@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { SelectedDog } from './child/child.component';
+import { Component } from '@angular/core';
+import { SelectedDog } from './s22-child/s22-child.component';
 
 @Component({
   selector: 'app-s22-event-emitter',

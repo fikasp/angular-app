@@ -1,0 +1,8 @@
+<div class="container">
+  <button (click)="stringEvent.emit('Hello!')">String event</button>
+  <button (click)="booleanEvent.emit(true)">Boolean event</button>
+  <button (click)="numberEvent.emit(42)">Number event</button>
+  <button (click)="voidEvent.emit()">Void event</button>
+  <button (click)="createDateEvent()">Date event</button>
+  <button (click)="createObjectEvent($event)">Object event</button>
+</div>
