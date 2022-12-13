@@ -14,6 +14,7 @@ import { S13TemplateReferenceComponent } from './examples/s13-template-reference
 import { S14PropertyBindingComponent } from './examples/s14-property-binding/s14-property-binding.component';
 import { S15TwoWayBindingComponent } from './examples/s15-two-way-binding/s15-two-way-binding.component';
 import { S16NgIfComponent } from './examples/s16-ng-if/s16-ng-if.component';
+import { S22EventEmitterComponent } from './examples/s22-event-emitter/s22-event-emitter.component';
 
 const routes: Routes = [
     {path: '', pathMatch: 'full', redirectTo: '02'},
@@ -29,6 +30,7 @@ const routes: Routes = [
     {path: '17', component: S15TwoWayBindingComponent},
     {path: '18', component: S13TemplateReferenceComponent},
     {path: '19', component: S16NgIfComponent},
+    {path: '20', component: S22EventEmitterComponent},
   ];
   
 
