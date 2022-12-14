@@ -33,7 +33,7 @@ import { S22ChildComponent } from './s22-event-emitter/s22-child/s22-child.compo
     S15TwoWayBindingComponent,
     S16NgIfComponent,
     S22EventEmitterComponent,
-    S22ChildComponent
+    S22ChildComponent,
   ],
   exports: []
 })
